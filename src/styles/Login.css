@@ -1,0 +1,32 @@
+.login-container {
+    display: flex;
+    background-image: url("./img/wave-bg.svg");
+    background-size: cover;
+    border-radius: 15px;
+    padding: 64px 50px 60px 100px;
+    height: 500px;
+    width: 750px;
+}
+
+.login-form {
+    width: 66%;
+    display: grid;
+    place-content: center;
+    grid-template-rows: repeat(2, 80px) 50px 80px;
+    grid-template-columns: 100%;
+}
+
+button {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+}
+
+.signup-text {
+    font-size: 16px;
+}
+
+.signup-text > a {
+    line-height: 1rem;
+    text-decoration: none;
+    color: var(--color-blue);
+}

@@ -1,0 +1,55 @@
+.btn {
+    min-width: 100px;
+    height: 50px;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transition: 200ms linear;
+}
+
+.blue-btn {
+    background-color: var(--color-blue);
+    border-color: var(--color-blue);
+}
+
+.blue-btn:hover {
+    background-color: var(--color-darkblue);
+    border-color: var(--color-darkblue);
+}
+
+.green-btn {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+}
+
+.green-btn:hover {
+    background-color: var(--color-darkgreen);
+    border-color: var(--color-darkgreen);
+}
+
+.red-btn {
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+}
+.red-btn:hover {
+    background-color: var(--color-darkred);
+    border-color: var(--color-darkred);
+}
+
+.grey-btn {
+    background-color: var(--color-grey);
+    border-color: var(--color-grey);
+}
+
+.grey-btn:hover {
+    background-color: var(--color-darkgrey);
+    border-color: var(--color-darkgrey);
+}

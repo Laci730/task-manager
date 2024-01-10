@@ -1,0 +1,21 @@
+:root{
+  --color-blue: rgb(0, 160, 255);
+  --color-darkblue: rgb(0, 140, 255);
+  --color-green: rgb(0, 180, 0);
+  --color-darkgreen: rgb(0, 160, 0);
+  --color-yellow: rgb(255, 220, 0);
+  --color-darkyellow: rgb(235, 200, 0);
+  --color-grey: rgb(140, 140, 140);
+  --color-darkgrey: rgb(120, 120, 120);
+  --color-red: rgb(255, 80, 80);
+  --color-darkred: rgb(255, 60, 60);
+}
+
+.material-symbols-outlined {
+  user-select: none;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}

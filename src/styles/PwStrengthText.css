@@ -1,0 +1,22 @@
+.pw-text {
+    font-size: 12px;
+    color: #ffffff;
+    user-select: none;
+}
+
+.red-text {
+    transition: 200ms linear;
+    color: var(--color-darkred);
+}
+
+.yellow-text {
+    color: var(--color-yellow);
+}
+
+.green-text {
+    color: var(--color-darkgreen);
+}
+
+.blue-text {
+    color: var(--color-blue);
+}
