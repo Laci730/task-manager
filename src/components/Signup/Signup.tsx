@@ -3,12 +3,14 @@ import Input from "../Input/Input";
 import Button from "../Button/Button";
 import "../../styles/Signup.css";
 import PwStrengthText from "./PwStrengthText";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
     const users = localStorage.getItem("userStorage") || '{"users": []}';
     const [username, setUsername] = useState("");
     const [password, setPassword]= useState("");
     const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     function submitForm(e: React.FormEvent) {
         e.preventDefault();
@@ -35,22 +37,29 @@ function Signup() {
 
     return(
         <form className="signup-form" onSubmit={submitForm}>
-                <Input 
-                    type="text" 
-                    label="Username" 
-                    value={username} 
-                    onChange={(val) => setUsername(val)}/>
+            <span 
+                className="material-symbols-outlined navigate-back"
+                onClick={() => navigate("../login")}>
+                    arrow_back
+            </span>
+            <Input 
+                type="text" 
+                label="Username" 
+                value={username} 
+                onChange={(val) => setUsername(val)}/>
+            <div>
                 <Input 
                     type="password" 
                     label="Password" 
                     value={password} 
                     onChange={(val) => setPassword(val)}/>
                 <PwStrengthText value={password} />
-                <div className={"error-text"}>{error}</div>
-                <Button 
-                    buttonType="submit" 
-                    color="blue" 
-                    text="Sign up"/>
+            </div>
+            <div className={"error-text"}>{error}</div>
+            <Button 
+                buttonType="submit" 
+                color="blue" 
+                text="Sign up"/>
         </form>
     );
 }

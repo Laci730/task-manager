@@ -1,11 +1,35 @@
 .signup-form {
     height: 400px;
     width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
     border-radius: 10px;
+    padding: 32px 32px;
+}
+
+.signup-form > div {
+    width: 60%;
+}
+
+.signup-form > span {
+    width: 32px;
+    height: 32px;
     display: grid;
-    grid-template-rows: repeat(64px 64px auto 1fr auto);
-    padding: 32px 64px;
+    place-items: center;
+    color: var(--color-grey);
+    align-self: flex-start;
+    border-radius: 5px;
+}
+
+.signup-form > span:hover {
+    color: var(--color-darkgrey);
+    background-color: var(--color-darkblue);
+    color: white;
+    cursor: pointer;
+    transition: 150ms linear;
 }
 
 .error-text {
