@@ -1,5 +1,41 @@
 .login-text-container {
-    padding-left: 220px;
+    padding: 32px;
     color: white;
     font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-title {
+    font-size: 24px;
+}
+
+.phone-text {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .login-text-container {
+        color: black;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .login-text-container {
+        padding: 0px;
+    }
+
+    ul {
+        display: none;
+    }
+
+    p {
+        display: none;
+    }
+
+    .phone-text {
+        display: block;
+    }
 }

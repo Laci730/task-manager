@@ -15,9 +15,9 @@ function Login() {
     function submitForm(e: React.FormEvent) {
         e.preventDefault();
         const userList = JSON.parse(users).users;
-        const userMatch = userList.find((user: User) => user.username === username);
+        const userMatch = userList.find((user: User) => user.username === username && user.password === password);
 
-        if(userMatch){
+        if(username && userMatch){
             localStorage.setItem("currentUser", userMatch.username);
             setError("Success")
         } else {
@@ -48,8 +48,7 @@ function Login() {
                     color="blue" 
                     text="Log in" />
                 <section className="signup-text">
-                    Don't have an account yet?
-                    Sign up by clicking <Link to="../signup">here.</Link>
+                    Or create a <Link to="../signup">new account.</Link>
                 </section>
             </form>
             <LoginText />

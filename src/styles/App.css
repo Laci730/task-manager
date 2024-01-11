@@ -9,5 +9,22 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #00A0FF, #FAFAFA);
+    background: linear-gradient(135deg, var(--color-blue), #FAFAFA);
+}
+
+#root {
+    width: 100dvw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1000px) {
+    body {
+        background: none;
+        background-color: var(--color-blue);
+    }
+}
+
+@media (max-width: 600px) {
 }

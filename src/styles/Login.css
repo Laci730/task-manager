@@ -3,7 +3,7 @@
     background-image: url("./img/wave-bg.svg");
     background-size: cover;
     border-radius: 15px;
-    padding: 64px 50px 60px 100px;
+    padding: 48px 50px 60px 100px;
     height: 500px;
     width: 750px;
 }
@@ -12,8 +12,8 @@
     width: 66%;
     display: grid;
     place-content: center;
-    grid-template-rows: repeat(2, 80px) 50px 80px;
-    grid-template-columns: 100%;
+    grid-template-rows: 80px 80px 48px 80px 80px;
+    margin-right: 200px;
 }
 
 button {
@@ -29,4 +29,52 @@ button {
     line-height: 1rem;
     text-decoration: none;
     color: var(--color-blue);
+}
+
+@media (max-width: 1000px) {
+    .login-container {
+        padding: 32px 25px 30px 50px;
+        height: 500px;
+        width: 500px;
+        background-image: none;
+        background-color: white;
+    }
+
+    .login-form {
+        width: 100%;
+        margin-right: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .login-container {
+        height: fit-content;
+        width: calc(100% - 64px);
+        flex-direction: column-reverse;
+        padding: 32px;
+        border-radius: 0px;
+    }
+
+    .login-form {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 200px;
+        margin: 0px;
+    }
+
+    .error-text {
+        white-space: nowrap;
+        margin-bottom: 16px;
+    }
+
+    .login-form > button {
+        margin-bottom: 10px;
+    }
+
+    .signup-text {
+        white-space: nowrap;
+        margin-top: 8px;
+    }
 }
