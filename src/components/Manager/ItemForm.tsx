@@ -26,7 +26,7 @@ function ItemForm(props: Props) {
             props.onSubmit(taskItem);
         }
         else {
-            setError("Please provide at least a name and deadline for your task.")
+            setError("Please provide a name and deadline for your task.")
         }
     }
 

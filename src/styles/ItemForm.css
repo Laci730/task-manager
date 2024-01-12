@@ -1,7 +1,7 @@
 .item-form-bg {
     position: absolute;
     width: 100dvw;
-    height: 100dvh;
+    min-height: 100dvh;
     background-color: rgba(128, 128, 128, 0.5);
     display: flex;
     justify-content: center;
@@ -15,8 +15,7 @@
     display: grid;
     grid-template-rows: repeat(5, auto);
     grid-template-columns: 40% 60%;
-    flex-direction: column;
-    background-color: #ffffff;
+    background-color: white;
     padding: 0px 64px;
     border-radius: 10px;
     position: relative;
@@ -30,14 +29,13 @@
     place-content: center;
     width: 30px;
     height: 30px;
-    border: 1px solid var(--color-red);
-    color: var(--color-red);
+    background-color: var(--color-red);
+    color: white;
     border-radius: 6px;
 }
 
 .close-button:hover {
-    background-color: var(--color-red);
-    color: white;
+    background-color: var(--color-darkred);
     transition: 200ms linear;
     cursor: pointer;
 }
@@ -80,4 +78,72 @@
     grid-row: 4 / 5;
     grid-column: 1 / 3;
     width: 50%;
+}
+
+@media (max-width: 800px) {
+    
+    .item-form {
+        width: 80%;
+        max-width: calc(100% - 64px);
+        height: 70%;
+        padding: 0px 32px;
+    }
+    
+    .close-button {
+        position: absolute;
+        top: 48px;
+        border-radius: 6px;
+    }
+    
+    .item-form > button {
+        margin-bottom: 16px;
+    }
+    
+    .input-form-error {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .item-form {
+        width: calc(100% - 64px);
+        display: flex;
+        flex-direction: column;
+        border-radius: 0px;
+    }
+
+    .item-form > .input-container {
+        width: 50%;
+        align-self: center;
+    }
+    
+    .close-button {
+    }
+    
+    .description-container {
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        margin: 16px 0px;
+    }
+    
+    .description-input {
+        align-self: center;
+        width: 95%;
+        max-width: 95%;
+        margin-top: 10px;
+        padding: 10px;
+        resize: none;
+        border-radius: 5px;
+    }
+    
+    .item-form > button {
+        margin-bottom: 16px;
+    }
+    
+    .input-form-error {
+        align-self: center;
+    }
 }

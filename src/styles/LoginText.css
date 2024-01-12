@@ -27,11 +27,11 @@
         padding: 0px;
     }
 
-    ul {
+    .login-text-container > ul {
         display: none;
     }
 
-    p {
+    .about-text {
         display: none;
     }
 

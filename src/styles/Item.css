@@ -150,3 +150,36 @@
     cursor: pointer;
     background-color: var(--color-darkgreen);
 }
+
+@media (max-width: 1000px) {
+    
+    .item-expand {
+        height: 200px;
+        grid-template-rows: 3fr 1fr;
+        grid-template-columns: repeat(7, 1fr);
+    }
+    
+    .expanded {
+        padding-top: 32px;
+        height: 250px;
+        transition: 150ms ease-out;
+    }
+    
+    .task-name {
+        width: 60%;
+        font-size: 24px;
+        margin: 0px;
+        padding-left: 32px;
+    }
+    
+    .task-deadline {
+        width: 40%;
+    }
+    
+    .delete-button,
+    .edit-button,
+    .minimize-button,
+    .save-button {
+        border: 1px solid white;
+    }
+}
